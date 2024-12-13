@@ -1,0 +1,1 @@
+[filename](..duction.md ':include')
