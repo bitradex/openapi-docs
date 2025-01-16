@@ -1,1 +1,1 @@
-[filename](..tion.md ':include')
+[filename](../../zh-cn/introduction.md ':include')
