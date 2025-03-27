@@ -15,9 +15,9 @@
 > 请求示例
 
 ```shell
-curl --location --request GET 'https://api.noahex-test.com/v1/spot/public/ticker/24h?symbol=btc_usdt&symbols=&tags' \
+curl --location --request GET 'https://api.bitradex-test.com/v1/spot/public/ticker/24h?symbol=btc_usdt&symbols=&tags' \
 --header 'Accept: */*' \
---header 'Host: api.noahex-test.com' \
+--header 'Host: api.bitradex-test.com' \
 --header 'Connection: keep-alive'
 ```
 

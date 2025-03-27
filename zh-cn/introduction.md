@@ -1,6 +1,6 @@
 # REST API
 
-> `域名`:  `https://api.noahex-test.com`
+> `域名`:  `https://api.bitradex-test.com`
 
 ----
 
@@ -34,7 +34,7 @@ apiKey限流示例说明：`50/s/apiKey`，表示每个apiKey每秒该接口请�
 
 # 签名说明
 
-由于NoahEx需要为第三方平台提供一些开放性的接口，所以需要接口的数据安全问题，比如数据是否被篡改，数据是否已过时，数据是否可以重复提交，接口在某个时间内访问频率等问题。其中数据是否被篡改是最重要的。
+由于BitradeX需要为第三方平台提供一些开放性的接口，所以需要接口的数据安全问题，比如数据是否被篡改，数据是否已过时，数据是否可以重复提交，接口在某个时间内访问频率等问题。其中数据是否被篡改是最重要的。
 
 1. 先通过用户中心申请appkey和secretkey，针对不同的调用，提供不同的appkey和secretkey。
 
@@ -47,7 +47,7 @@ apiKey限流示例说明：`50/s/apiKey`，表示每个apiKey每秒该接口请�
    > 服务器收到请求时会判断请求中的时间戳，最长60秒，最小为2秒，如果是5000毫秒之前发出的，则请求会被认为无效。  
    这个时间窗口值可以通过发送可选参数recvWindow来设置。 另外，如果服务器计算得出客户端时间戳在服务器时间的‘未来’一秒以上，也会拒绝请求。
    关于交易时效性
-   互联网状况并不100%可靠，不可完全依赖,因此你的程序本地到NOAH服务器的时延会有抖动。这是我们设置recvwindow的目的所在，如果你从事高频交易，对交易时效性有较高的要求，可以灵活设置recvwindow以达到你的要求。
+   互联网状况并不100%可靠，不可完全依赖,因此你的程序本地到BitradeX服务器的时延会有抖动。这是我们设置recvwindow的目的所在，如果你从事高频交易，对交易时效性有较高的要求，可以灵活设置recvwindow以达到你的要求。
    不推荐使用5秒以上的recvwindow
 
 5. 加入algorithms (签名方法/算法)，用户计算签名是基于哈希的协议，推荐使用HmacSHA256。具体支持那些协议，请参见下面列出:
@@ -55,7 +55,7 @@ apiKey限流示例说明：`50/s/apiKey`，表示每个apiKey每秒该接口请�
 
 ## 签名生成
 
-以 https://api.noahex-test.com/v1/spot 为例  
+以 https://api.bitradex-test.com/v1/spot 为例  
 以下是在linux bash环境下使用 echo openssl 和curl工具实现的一个调用接口下单的示例
 
 appkey、secret仅供示范:
@@ -176,7 +176,7 @@ validate-algorithms=HmacSHA256&validate-appkey=2fa91add-388c-44f2-8365-f4b72886c
 - 请求报文样例：
 
 ```shell
-curl --location --request POST 'https://api.noahex-test.com/v1/spot/order' \
+curl --location --request POST 'https://api.bitradex-test.com/v1/spot/order' \
 --header 'Content-Type: application/json' \
 --header 'validate-algorithms: HmacSHA256' \
 --header 'validate-appkey: 2fa91add-388c-44f2-8365-f4b72886c135' \
@@ -184,14 +184,14 @@ curl --location --request POST 'https://api.noahex-test.com/v1/spot/order' \
 --header 'validate-timestamp: 1725455266041' \
 --header 'validate-signature: ce246607785e168d4677afff5af3746eb8513133d11ca3c5e3913eeea5aca63c' \
 --header 'Accept: */*' \
---header 'Host: api.noahex-test.com' \
+--header 'Host: api.bitradex-test.com' \
 --header 'Connection: keep-alive' \
 --data-raw '{"symbol":"BTC_USDT","clientOrderId":"16559590087220001","side":"BUY","type":"LIMIT","timeInForce":"FOK","bizType":"SPOT","price":40000,"quantity":2,"media":"btok","mediaChannel":"12345"}'
 ```
 - 注意事项：
 
   注意检查 Content-Type、签名原始报文中的参数格式、请求报文中的参数格式  
-  Java sdk: http://gitlab.noah-inc.work/backend/sdk-for-java.git
+  <!-- Java sdk: http://gitlab.noah-inc.work/backend/sdk-for-java.git -->
 
 # 响应格式
 
@@ -452,5 +452,5 @@ curl --location --request POST 'https://api.noahex-test.com/v1/spot/order' \
 
 # 技术支持
 
-在我们的电报组中获取支持:  [NoahEx API Support Group](https://t.me/NoahExOfficial)
+在我们的电报组中获取支持:  [BitradeX API Support Group](https://t.me/BitradeXOfficial)
 如有疑问请咨询在线客服

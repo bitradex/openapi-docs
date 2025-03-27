@@ -9,9 +9,9 @@
 > 请求示例
 
 ```shell
-curl --location --request GET 'https://api.noahex-test.com/v1/future-u/market/public/cg/contracts' \
+curl --location --request GET 'https://api.bitradex-test.com/v1/future-u/market/public/cg/contracts' \
 --header 'Accept: */*' \
---header 'Host: api.noahex-test.com' \
+--header 'Host: api.bitradex-test.com' \
 --header 'Connection: keep-alive'
 ```
 

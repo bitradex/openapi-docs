@@ -1,6 +1,6 @@
 # REST API
 
-> `Domain`: `https://api.noahex-test.com`
+> `Domain`: `https://api.bitradex-test.com`
 
 ----
 
@@ -32,7 +32,7 @@ apiKey rate limiting example: `50/s/apiKey`, meaning each apiKey is limited to a
 
 # Signature Explanation
 
-To ensure data security for NoahEx's open APIs, including protection against data tampering, data expiration, data replay, and access frequency issues, a request signature is required.
+To ensure data security for BitradeX's open APIs, including protection against data tampering, data expiration, data replay, and access frequency issues, a request signature is required.
 
 1. Apply for `appkey` and `secretkey` through the user center. Different `appkey` and `secretkey` should be used for different calls.
 
@@ -49,7 +49,7 @@ To ensure data security for NoahEx's open APIs, including protection against dat
 
 ## Signature Generation
 
-For example, with `https://api.noahex-test.com/v1/spot`:
+For example, with `https://api.bitradex-test.com/v1/spot`:
 Here’s how you can use `echo`, `openssl`, and `curl` in a Linux bash environment to call an API for placing an order:
 
 Example `appKey` and `secret`:
@@ -130,7 +130,7 @@ validate-algorithms=HmacSHA256&validate-appkey=2fa91add-388c-44f2-8365-f4b72886c
 - Request example:
 
 ```shell
-curl --location --request POST 'https://api.noahex-test.com/v1/spot/order' \
+curl --location --request POST 'https://api.bitradex-test.com/v1/spot/order' \
 --header 'Content-Type: application/json' \
 --header 'validate-algorithms: HmacSHA256' \
 --header 'validate-appkey: 2fa91add-388c-44f2-8365-f4b72886c135' \
@@ -138,7 +138,7 @@ curl --location --request POST 'https://api.noahex-test.com/v1/spot/order' \
 --header 'validate-timestamp: 1725455266041' \
 --header 'validate-signature: ce246607785e168d4677afff5af3746eb8513133d11ca3c5e3913eeea5aca63c' \
 --header 'Accept: */*' \
---header 'Host: api.noahex-test.com' \
+--header 'Host: api.bitradex-test.com' \
 --header 'Connection: keep-alive' \
 --data-raw '{"symbol":"BTC_USDT","clientOrderId":"16559590087220001","side":"BUY","type":"LIMIT","timeInForce":"FOK","bizType":"SPOT","price":40000,"quantity":2,"media":"btok","mediaChannel":"12345"}'
 ```
@@ -410,5 +410,5 @@ Defines how long an order remains valid
 
 # Support
 
-Get support in our Telegram group: [NoahEx API Support Group](https://t.me/NoahExOfficial)
+Get support in our Telegram group: [BitradeX API Support Group](https://t.me/BitradeXOfficial)
 For inquiries, please consult our online customer service.

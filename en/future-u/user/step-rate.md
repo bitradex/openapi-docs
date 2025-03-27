@@ -7,14 +7,14 @@
 > Request Example
 
 ```shell
-curl --location --request GET 'https://api.noahex-test.com/v1/future-u/user/user/step-rate' \
+curl --location --request GET 'https://api.bitradex-test.com/v1/future-u/user/user/step-rate' \
 --header 'validate-algorithms: HmacSHA256' \
 --header 'validate-appkey: 2fa91add-388c-44f2-8365-f4b72886c135' \
 --header 'validate-recvwindow: 6000' \
 --header 'validate-timestamp: 1725514822675' \
 --header 'validate-signature: 4c1ac90b4431fe43807fe3e0cb1d5c8388a9ded21016496b33af8158aacd6e15' \
 --header 'Accept: */*' \
---header 'Host: api.noahex-test.com' \
+--header 'Host: api.bitradex-test.com' \
 --header 'Connection: keep-alive'
 ```
 

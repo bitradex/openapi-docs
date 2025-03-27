@@ -1,6 +1,6 @@
 <!-- _navbar.md -->
 
-* [NoahEx](https://www.noahex-test.com/)
+* [BitradeX](https://www.bitradex-test.com/)
 
 * [Index](/en/)
 

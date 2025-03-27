@@ -16,14 +16,14 @@
 > 请求示例
 
 ```shell
-curl --location --request GET 'https://api.noahex-test.com/v1/future-u/trade/order/trade-list?orderId&symbol&startTime&endTime&page&size' \
+curl --location --request GET 'https://api.bitradex-test.com/v1/future-u/trade/order/trade-list?orderId&symbol&startTime&endTime&page&size' \
 --header 'validate-algorithms: HmacSHA256' \
 --header 'validate-appkey: 2fa91add-388c-44f2-8365-f4b72886c135' \
 --header 'validate-recvwindow: 6000' \
 --header 'validate-timestamp: 1725512990907' \
 --header 'validate-signature: 8f7fcd7be1e099064054a9df8737b2cc0bd410f03cbc4010210db5ab522792b9' \
 --header 'Accept: */*' \
---header 'Host: api.noahex-test.com' \
+--header 'Host: api.bitradex-test.com' \
 --header 'Connection: keep-alive'
 ```
 
