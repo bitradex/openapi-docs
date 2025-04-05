@@ -1,6 +1,6 @@
 <!-- _navbar.md -->
 
-* [BitradeX](https://www.bitradex-test.com/)
+* [BitradeX](https://www.bitradex.com/)
 
 * [Index](/en/)
 

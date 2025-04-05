@@ -13,9 +13,9 @@ Note：This method does not require a signature.
 > Request Example
 
 ```shell
-curl --location --request GET 'https://api.bitradex-test.com/v1/future-u/market/public/q/ticker?symbol=btc_usdt' \
+curl --location --request GET 'https://api.bitradex.com/v1/future-u/market/public/q/ticker?symbol=btc_usdt' \
 --header 'Accept: */*' \
---header 'Host: api.bitradex-test.com' \
+--header 'Host: api.bitradex.com' \
 --header 'Connection: keep-alive'
 ```
 

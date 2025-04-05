@@ -14,9 +14,9 @@
 > 请求示例
 
 ```shell
-curl --location --request GET 'https://api.bitradex-test.com/v1/future-u/market/public/q/deal?symbol=btc_usdt&num=2' \
+curl --location --request GET 'https://api.bitradex.com/v1/future-u/market/public/q/deal?symbol=btc_usdt&num=2' \
 --header 'Accept: */*' \
---header 'Host: api.bitradex-test.com' \
+--header 'Host: api.bitradex.com' \
 --header 'Connection: keep-alive'
 ```
 
